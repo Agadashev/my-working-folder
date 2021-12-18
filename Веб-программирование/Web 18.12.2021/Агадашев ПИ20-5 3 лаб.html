@@ -1,0 +1,52 @@
+<meta charset="utf-8">
+<script>
+	var kk = []
+	// 1 zadanie
+	for (i=0; i<15; i=i+1){
+		min = Math.ceil(-10);
+		max = Math.floor(30);
+		kk[i] = Math.floor(Math.random()*(max - min + 1) + min)
+
+	}
+	alert(kk)
+	
+	// 3 zadanie
+	var SRP = 0
+	var SRO = 0
+	var count = 0
+	for (i=0; i<15; i=i+1){
+		if (kk[i] < 0) {
+			SRO = SRO + kk[i]
+		} else if (kk[i]>0){
+			SRP = SRO + kk[i]
+		} else {
+			count += 1
+		}
+	}
+	SRP = SRP/15
+	SRO = SRO/15
+	alert(SRP, SRO, count)
+	
+	// 2 zadanie
+	for (i=0; i<15; i=i+1){
+		if (kk[i] < 0) {
+			kk[i] = kk[i] * kk[i]
+		}
+	}
+	alert(kk)
+	
+	// 4 zadanie
+	kk = []
+	counter = [0, 0, 0]
+	for (i=0; i<1000000; i=i+1){
+		min = Math.ceil(0);
+		max = Math.floor(2);
+		kk[i] = Math.floor(Math.random()*(max - min + 1) + min)
+		counter[kk[i]] = counter[kk[i]] + 1
+	}
+	alert(kk)
+	alert(counter)	
+	
+	
+	
+</script>
